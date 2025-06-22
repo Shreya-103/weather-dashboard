@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-image: linear-gradient(to right, #667eea, #764ba2);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex items-center justify-center px-4 py-8">
+  <div class="bg-white/20 backdrop-blur-md shadow-2xl rounded-2xl p-8 w-full max-w-md text-white">
+    <h1 class="text-3xl font-bold text-center mb-6 drop-shadow-lg">Weather Dashboard</h1>
+    
+    <div class="flex gap-2 mb-6">
+      <input
+        type="text"
+        id="city-input"
+        placeholder="Enter city name"
+        class="flex-1 px-4 py-2 rounded-lg bg-white/20 backdrop-blur-sm text-white placeholder-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-white"
+      />
+      <button
+        id="city-input-btn"
+        class="bg-white/30 hover:bg-white/40 px-4 py-2 rounded-lg font-semibold transition"
+      >
+        Get
+      </button>
+    </div>
+
+    <div id="weather-info" style="display: none;" class="space-y-4 text-center">
+      <h2 id="city-name" class="text-2xl font-semibold"></h2>
+      <p id="date" class="text-sm text-white/80"></p>
+      <img id="weather-icon" src="" alt="Weather Icon" class="mx-auto w-20 h-20"/>
+      <p id="temperature" class="text-xl font-bold"></p>
+      <p id="description" class="capitalize text-white/90"></p>
+      <p id="wind-speed" class="text-white/80"></p>
+    </div>
+  </div>
+1
+  <script src="./weatherDash.js"></script>
+</body>
+</html>
